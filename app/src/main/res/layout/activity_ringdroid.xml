@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+        <com.videoedit.ringdroid.WaveformView
+            android:id="@+id/waveform"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.videoedit.ringdroid.MarkerView
+            android:id="@+id/startmarker"
+            android:nextFocusDown="@+id/endmarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marker_left"
+            android:contentDescription="Start marker" />
+
+        <com.videoedit.ringdroid.MarkerView
+            android:id="@+id/endmarker"
+            android:nextFocusUp="@+id/startmarker"
+            android:nextFocusDown="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marker_right"
+            android:contentDescription="End marker" />
+
+    </RelativeLayout>
+</LinearLayout>
